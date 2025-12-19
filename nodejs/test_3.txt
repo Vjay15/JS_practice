@@ -1,0 +1,2 @@
+This is a promise based write
+This is a promise based append

@@ -1,12 +1,11 @@
-function* generateSequence(){
+function* generateSequence_2(){
     for(let i=0;i<5;i++){
         yield i;
     }
 }
 
 // generators act like iterables
-let generator = generateSequence();
-generator.next(6);
+let generator = generateSequence_2();
 for(let val of generator){
     console.log(val);
 }

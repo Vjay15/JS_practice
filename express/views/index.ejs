@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h2>GET request to fetch the records</h2>
+    <br/>
+    <form method="GET" action="/todos">
+        <button type="submit">Fetch the list of Todos</button>
+    </form>
+    <p>
+        <%= locals.getRecords || "No records found" %>
+    </p>
+    <br/>
+    <h2>GET request to fetch the independent records</h2>
+    <br/>
+    <form method="GET" action="/todos">
+        <input type="text" name="id" placeholder="<%= locals.getRecordsID %>" required>
+        <br/>
+        <button type="submit">Fetch the specific Todos</button>
+    </form>
+    <br/>
+    <p>
+        <%= locals.getRecord || "No records found" %>
+    </p>
+    <br/>
+    <h2>POST request to add the records</h2>
+    <form method="POST" action="/todos">
+        <input type="text" name="title" placeholder="<%= locals.getRecordID %>" required>
+         <br/>
+        <button type="submit">Add the Todo</button>
+    </form>
+    <br/>
+    <p>
+        <%= locals.postRecord || "No records found" %>
+    </p>
+     <br/>
+   </body>
+   <a href="/todos/download">Download the json</a>
+</html>

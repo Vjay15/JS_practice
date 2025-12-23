@@ -70,7 +70,7 @@ const server = http.createServer((req,res) => {
                     res.writeHead(400, { 'Content-Type': 'text/html' });
                     res.end(`
                       <h1>Error</h1>
-                      <p>${err.message}</p>
+                      ${err.message}
                       <a href="/">Back</a>
                     `);
                   }
